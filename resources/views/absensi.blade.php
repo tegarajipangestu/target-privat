@@ -31,7 +31,7 @@
 				@foreach ($pengajars as $pengajar)
 				<tr>
 					<td>{{$pengajar->id_pengajar}}</td>
-					<td>{{$pengajar->nama}}</td>
+					<td>{{$pengajar->nama_pengajar}}</td>
 					<td><input type="checkbox" id="optionsCheckbox2" value="option1"></td>
 					<td><input type="checkbox" id="optionsCheckbox2" value="option1"></td>
 					<td><input type="checkbox" id="optionsCheckbox2" value="option1"></td>
@@ -47,5 +47,4 @@
 		</div>
 	</div><!--/span-->
 
-</div><!--/row-->
 @endsection

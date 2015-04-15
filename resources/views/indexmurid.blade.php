@@ -28,10 +28,10 @@
 				@foreach ($murids as $murid)
 				<tr>
 					<td>{{$murid->id_murid}}</td>
-					<td>{{$murid->nama}}</td>
-					<td class="center">{{$murid->alamat}}</td>
-					<td class="center">{{$murid->kontak}}</td>
-					<td class="center">{{$murid->matkul}}</td>
+					<td>{{$murid->nama_murid}}</td>
+					<td class="center">{{$murid->alamat_murid}}</td>
+					<td class="center">{{$murid->kontak_murid}}</td>
+					<td class="center">{{$murid->matkul_murid}}</td>
 					<td class="center">
 						<span class="label label-success">Active</span>
 					</td>

@@ -65,7 +65,13 @@ class PengajarController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$pengajar = DB::table('pengajars')
+            ->join('mengajars', 'mengajars.id_pengajar', '=', 'pengajars.id_pengajar')
+            ->join('murids', 'murids.id_murid', '=', 'mengajars.id_murid')
+            ->where('pengajars.id_pengajar','=',$id)
+            ->get();
+//		$pengajar = Pengajar::where('id_pengajar' , '=', $id)->first();;
+		return $pengajar;
 	}
 
 	/**
@@ -74,9 +80,14 @@ class PengajarController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit($pengajar)
 	{
-		//
+		// DB::table('pengajars')
+  //           ->where('id_pengajar', $pengajar['id_pengajar'])
+  //           ->update(['nama_pengajar' => $pengajar['nama_pengajar'])
+  //           ->update(['alamat_pengajar' => $pengajar['alamat_pengajar'])
+  //           ->update(['kontak_pengajar' => $pengajar['kontak_pengajar'])
+  //           ->update(['matkul_pengajar' => $pengajar['matkul_pengajar'])
 	}
 
 	/**
@@ -85,9 +96,14 @@ class PengajarController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function showupdate($id)
 	{
-		//
+		$pengajar = Pengajar::where('id_pengajar' , '=', $id)->first();;
+		return view('updatepengajar', compact('pengajar'));
+	}
+	public function postupdate($id)
+	{
+		
 	}
 
 	/**

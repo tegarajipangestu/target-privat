@@ -24,19 +24,19 @@ class CreatePengajarsMengajarsMuridsTable extends Migration {
 		{
 			$table->increments('id_pengajar');
 			$table->integer('gaji');
-			$table->string('nama');
-			$table->string('alamat');
-			$table->string('kontak');
-			$table->string('matkul');
+			$table->string('nama_pengajar');
+			$table->string('alamat_pengajar');
+			$table->string('kontak_pengajar');
+			$table->string('matkul_pengajar');
 			$table->timestamps();
 		});
 		Schema::create('murids', function(Blueprint $table)
 		{
 			$table->increments('id_murid');
-			$table->string('nama');
-			$table->string('alamat');
-			$table->string('kontak');
-			$table->string('matkul');
+			$table->string('nama_murid');
+			$table->string('alamat_murid');
+			$table->string('kontak_murid');
+			$table->string('matkul_murid');
 			$table->timestamps();
 		});
 		Schema::create('users', function(Blueprint $table)

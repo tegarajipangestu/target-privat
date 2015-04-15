@@ -27,14 +27,15 @@ Route::get('home', 'PageController@index');
 Route::get('indexpengajar', 'PengajarController@index');
 Route::get('createpengajar', 'PengajarController@create');
 Route::post('createpengajar', 'PengajarController@store');
-Route::get('updatepengajar', 'PengajarController@update');
-Route::get('showpengajar', 'PengajarController@show');
+Route::get('updatepengajar/{id}', 'PengajarController@showupdate');
+Route::post('updatepengajar/{id}', 'PengajarController@postupdate');
+Route::get('showpengajar/{id}', 'PengajarController@show');
 
 Route::get('indexmurid', 'MuridController@index');
 Route::get('createmurid', 'MuridController@create');
 Route::post('createmurid', 'MuridController@store');
 Route::get('updatemurid', 'MuridController@update');
-Route::get('showmurid', 'MuridController@show');
+Route::get('showmurid/{id}', 'MuridController@show');
 
 Route::get('indexjadwal', 'JadwalController@index');
 Route::get('createjadwal', 'JadwalController@store');

@@ -14,6 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- end: Mobile Specific -->
 	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.progressTimer.js"></script>
 
 	<!-- start: CSS -->
 	<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
@@ -341,7 +342,7 @@
 							<ul>
 								<li><a href="indexpengajar"><i class="icon-file-alt"></i><span class="hidden-tablet"> Semua Pengajar</span></a></li>
 								<li><a href="createpengajar"><i class="icon-file-alt"></i><span class="hidden-tablet"> Tambah Pengajar</span></a></li>
-							</ul>	
+							</ul>
 						</li>
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Murid</span><span class="label label-important"> 2 </span></a>
@@ -396,7 +397,7 @@
 					<a href="index.html">Home</a> 
 					<i class="icon-angle-right"></i>
 				</li>
-				<li><a href="#">{{$currentpage}}</a></li>
+				<li><a href="#"></a></li>
 			</ul>
 
 	@yield('content')    
